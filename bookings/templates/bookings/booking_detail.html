@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Booking Details</h2>
+<p>User: {{ object.user.username }}</p>
+<p>Experience: {{ object.experience }}</p>
+<p>Booking Date: {{ object.booking_date }}</p>
+<p>Status: {{ object.status }}</p>
+
+<a href="{% url 'bookings:booking_update' object.pk %}">Edit Booking</a> |
+<a href="{% url 'bookings:booking_delete' object.pk %}">Delete Booking</a>
+{% endblock %}

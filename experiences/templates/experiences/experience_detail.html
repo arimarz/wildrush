@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Experience Details</h2>
+<p>Sport: {{ object.sport.name }}</p>
+<p>Provider: {{ object.provider.name }}</p>
+<p>Price: ${{ object.price }}</p>
+<p>Duration: {{ object.duration }}</p>
+<p>Capacity: {{ object.capacity }}</p>
+
+<a href="{% url 'experiences:experience_update' object.pk %}">Edit Experience</a> |
+<a href="{% url 'experiences:experience_delete' object.pk %}">Delete Experience</a>
+{% endblock %}

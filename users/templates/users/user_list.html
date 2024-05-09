@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Users List{% endblock %}
+
+{% block content %}
+<h2>Users List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <a href="{% url 'users:user_detail' user.pk %}">View</a> |
+                <a href="{% url 'users:user_update' user.pk %}">Edit</a> |
+                <a href="{% url 'users:user_delete' user.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+3. User Detail (user_detail.html)
+This template shows more detailed information about a specific user.
+
+html
+Copy code
+{% extends "base.html" %}
+
+{% block title %}User Detail{% endblock %}
+
+{% block content %}
+<h2>User Detail: {{ user.username }}</h2>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>First Name: {{ user.first_name }}</p>
+<p>Last Name: {{ user.last_name }}</p>
+
+<a href="{% url 'users:user_update' user.pk %}">Edit User</a> |
+<a href="{% url 'users:user_delete' user.pk %}">Delete User</a>
+{% endblock %}
+4. User Form (user_form.html)
+This template is used for both creating a new user and updating an existing one.
+
+html
+Copy code
+{% extends "base.html" %}
+
+{% block title %}
+{% if user.pk %}
+Update User: {{ user.username }}
+{% else %}
+Create New User
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<h2>{% if user.pk %}Update User{% else %}Create New User{% endif %}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% if user.pk %}Update{% else %}Create{% endif %}</button>
+</form>
+{% endblock %}
+5. User Delete Confirmation (user_confirm_delete.html)
+This template provides a confirmation prompt before deleting a user.
+
+html
+Copy code
+{% extends "base.html" %}
+
+{% block title %}Delete User: {{ user.username }}{% endblock %}
+
+{% block content %}
+<h2>Are you sure you want to delete "{{ user.username }}"?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+<a href="{% url 'users:user_list' %}">Cancel</a>
+{% endblock %}
+
+
+
+
+
+
+
+

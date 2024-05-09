@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Experiences List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Sport</th>
+            <th>Provider</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Capacity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for experience in object_list %}
+        <tr>
+            <td>{{ experience.sport.name }}</td>
+            <td>{{ experience.provider.name }}</td>
+            <td>${{ experience.price }}</td>
+            <td>{{ experience.duration }}</td>
+            <td>{{ experience.capacity }}</td>
+            <td>
+                <a href="{% url 'experiences:experience_detail' experience.pk %}">View</a> |
+                <a href="{% url 'experiences:experience_update' experience.pk %}">Edit</a> |
+                <a href="{% url 'experiences:experience_delete' experience.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'experiences:experience_create' %}">Add New Experience</a>
+{% endblock %}

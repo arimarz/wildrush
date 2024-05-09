@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Subscription Detail{% endblock %}
+
+{% block content %}
+    <h2>Subscription Detail</h2>
+    <p><strong>User:</strong> {{ object.user }}</p>
+    <p><strong>Provider:</strong> {{ object.provider }}</p>
+    <p><strong>Start Date:</strong> {{ object.start_date }}</p>
+    <p><strong>End Date:</strong> {{ object.end_date }}</p>
+    <a href="{% url 'subscriptions:subscription_update' object.pk %}">Edit</a>
+    <form method="post" action="{% url 'subscriptions:subscription_delete' object.pk %}">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{% url 'subscriptions:subscription_list' %}">Back to Subscription List</a>
+{% endblock %}

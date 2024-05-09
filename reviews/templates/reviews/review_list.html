@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Review List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Experience</th>
+            <th>Rating</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for review in object_list %}
+        <tr>
+            <td>{{ review.user.username }}</td>
+            <td>{{ review.experience }}</td>
+            <td>{{ review.rating }}</td>
+            <td>
+                <a href="{% url 'reviews:review_detail' review.pk %}">View</a> |
+                <a href="{% url 'reviews:review_update' review.pk %}">Edit</a> |
+                <a href="{% url 'reviews:review_delete' review.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'reviews:review_create' %}">Add New Review</a>
+{% endblock %}

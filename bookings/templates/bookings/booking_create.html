@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ object.pk|default:"Create New" }} Booking</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{{ object.pk|default:"Create" }} Booking</button>
+</form>
+{% endblock %}

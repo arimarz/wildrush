@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Provider Details: {{ object.name }}</h2>
+<p>Location: {{ object.location }}</p>
+<p>Contact Info: {{ object.contact_info }}</p>
+
+<a href="{% url 'providers:provider_update' object.pk %}">Edit Provider</a> |
+<a href="{% url 'providers:provider_delete' object.pk %}">Delete Provider</a>
+{% endblock %}

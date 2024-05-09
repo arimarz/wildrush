@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Providers List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Contact Info</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for provider in object_list %}
+        <tr>
+            <td>{{ provider.name }}</td>
+            <td>{{ provider.location }}</td>
+            <td>{{ provider.contact_info }}</td>
+            <td>
+                <a href="{% url 'providers:provider_detail' provider.pk %}">View</a> |
+                <a href="{% url 'providers:provider_update' provider.pk %}">Edit</a> |
+                <a href="{% url 'providers:provider_delete' provider.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'providers:provider_create' %}">Add New Provider</a>
+{% endblock %}

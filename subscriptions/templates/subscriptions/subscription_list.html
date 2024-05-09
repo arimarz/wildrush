@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Subscriptions List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Provider</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for subscription in object_list %}
+        <tr>
+            <td>{{ subscription.user.username }}</td>
+            <td>{{ subscription.provider.name }}</td>
+            <td>{{ subscription.start_date }}</td>
+            <td>{{ subscription.end_date }}</td>
+            <td>
+                <a href="{% url 'subscriptions:subscription_detail' subscription.pk %}">View</a> |
+                <a href="{% url 'subscriptions:subscription_update' subscription.pk %}">Edit</a> |
+                <a href="{% url 'subscriptions:subscription_delete' subscription.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'subscriptions:subscription_create' %}">Create New Subscription</a>
+{% endblock %}

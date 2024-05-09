@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Bookings List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Experience</th>
+            <th>Booking Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in object_list %}
+        <tr>
+            <td>{{ booking.user.username }}</td>
+            <td>{{ booking.experience }}</td>
+            <td>{{ booking.booking_date }}</td>
+            <td>{{ booking.status }}</td>
+            <td>
+                <a href="{% url 'bookings:booking_detail' booking.pk %}">View</a> |
+                <a href="{% url 'bookings:booking_update' booking.pk %}">Edit</a> |
+                <a href="{% url 'bookings:booking_delete' booking.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'bookings:booking_create' %}">Add New Booking</a>
+{% endblock %}

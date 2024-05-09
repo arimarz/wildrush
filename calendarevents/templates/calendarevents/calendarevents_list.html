@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Calendar Events List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Experience</th>
+            <th>Event Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for event in object_list %}
+        <tr>
+            <td>{{ event.user.username }}</td>
+            <td>{{ event.experience }}</td>
+            <td>{{ event.event_date }}</td>
+            <td>
+                <a href="{% url 'calendarevents:calendarevent_detail' event.pk %}">View</a> |
+                <a href="{% url 'calendarevents:calendarevent_update' event.pk %}">Edit</a> |
+                <a href="{% url 'calendarevents:calendarevent_delete' event.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'calendarevents:calendarevent_create' %}">Add New Event</a>
+{% endblock %}

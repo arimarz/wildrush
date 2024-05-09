@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Sports List{% endblock %}
+
+{% block content %}
+    <h2>Sports List</h2>
+    <ul>
+    {% for sport in object_list %}
+        <li><a href="{% url 'sports:sport_detail' sport.pk %}">{{ sport.name }}</a></li>
+    {% empty %}
+        <li>No sports available.</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'sports:sport_create' %}">Create New Sport</a>
+{% endblock %}

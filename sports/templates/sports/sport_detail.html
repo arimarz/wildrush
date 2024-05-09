@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Sport Detail{% endblock %}
+
+{% block content %}
+    <h2>Sport Detail</h2>
+    <p><strong>Name:</strong> {{ object.name }}</p>
+    <p><strong>Description:</strong> {{ object.description }}</p>
+    <p><strong>Category:</strong> {{ object.category }}</p>
+
+    <a href="{% url 'sports:sport_update' object.pk %}">Edit</a>
+    <a href="{% url 'sports:sport_confirm_delete' object.pk %}">Delete</a>
+    <a href="{% url 'sports:sport_list' %}">Back to Sports List</a>
+{% endblock %}

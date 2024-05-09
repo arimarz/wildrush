@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Calendar Event Detail</h2>
+<p>User: {{ object.user.username }}</p>
+<p>Experience: {{ object.experience }}</p>
+<p>Event Date: {{ object.event_date }}</p>
+
+<a href="{% url 'calendarevents:calendarevent_update' object.pk %}">Edit Event</a> |
+<a href="{% url 'calendarevents:calendarevent_delete' object.pk %}">Delete Event</a>
+{% endblock %}
