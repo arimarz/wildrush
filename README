@@ -43,3 +43,7 @@ Enables users to subscribe to adventure providers, fostering long-term relations
 Indexed foreign key fields streamline subscription management, supporting seamless user interactions with subscribed providers.
 
 The chosen design not only promotes data integrity, reduces redundancy, and establishes clear relationships but also integrates indexing to optimize database performance. By incorporating indexing alongside robust database design principles, Wild Rush ensures a responsive, efficient, and engaging adventure booking platform.
+
+
+run:
+pip install django-allauth

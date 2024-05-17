@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}My Experiences{% endblock %}
+
+{% block content %}
+    <h2>My Experiences</h2>
+    <ul>
+        {% for experience in experiences %}
+        <li>
+            <a href="{% url 'experiences:experience_detail' experience.pk %}">{{ experience.sport }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

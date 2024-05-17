@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
+{% block title %}Update Experience{% endblock %}
+
 {% block content %}
-<h2>{{ object.pk|default:"Add New" }} Experience</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">{{ object.pk|default:"Add" }} Experience</button>
-</form>
+    <h2>Update Experience</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
 {% endblock %}

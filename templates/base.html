@@ -1,3 +1,4 @@
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +12,25 @@
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'users:user_list' %}">Users</a></li>
-                <li><a href="{% url 'providers:provider_list' %}">Providers</a></li>
-                <li><a href="{% url 'experiences:experience_list' %}">Experiences</a></li>
-                <li><a href="{% url 'bookings:booking_list' %}">Bookings</a></li>
-                <li><a href="{% url 'reviews:review_list' %}">Reviews</a></li>
-                <li><a href="{% url 'calendarevents:calendarevent_list' %}">Calendar Events</a></li>
+                {% if user.is_authenticated %}
+                    {% if user.is_provider %}
+                        <li><a href="{% url 'providers:provider_detail' user.provider_profile.pk %}">Company Profile</a></li>
+                        <li><a href="{% url 'experiences:provider_experience_list' %}">Manage Experiences</a></li>
+                        <li><a href="{% url 'bookings:booking_list' %}">Manage Bookings</a></li>
+                        <li><a href="{% url 'reviews:review_list' %}">Customer Reviews</a></li>
+                        <li><a href="{% url 'providers:provider_statistics' %}">Statistics</a></li>
+                    {% else %}
+                        <li><a href="{% url 'experiences:experience_list' %}">Browse Experiences</a></li>
+                        <li><a href="{% url 'bookings:booking_list' %}">My Bookings</a></li>
+                        <li><a href="{% url 'reviews:review_list' %}">My Reviews</a></li>
+                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_login' %}">Login</a></li>
+                    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                    <li><a href="{% provider_login_url 'github' %}">Login with Github</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
@@ -27,7 +41,7 @@
     </main>
 
     <footer>
-        <p>Copyright © {% current_year %} My Site.</p>
+        <p>Copyright © {% now "Y" %} My Site.</p>
     </footer>
 </body>
 </html>
