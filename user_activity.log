@@ -1,0 +1,533 @@
+Watching for file changes with StatReloader
+/home/ari/Development/code/quotum/python/final_project/WildRush/providers/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ari/Development/code/quotum/python/final_project/WildRush/providers/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ari/Development/code/quotum/python/final_project/WildRush/providers/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ari/Development/code/quotum/python/final_project/WildRush/providers/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: users_user.is_admin
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ari/Development/code/quotum/python/final_project/WildRush/WildRush/urls.py", line 22, in home
+    return render(request, 'base.html')
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/defaulttags.py", line 315, in render
+    match = condition.eval(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/defaulttags.py", line 878, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 712, in resolve
+    obj = self.var.resolve(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 258, in inner
+    self._setup()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 198, in get_user
+    user = backend.get_user(user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/backends.py", line 158, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 492, in get
+    num = len(clone)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: users_user.is_admin
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: users_user.is_admin
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/Development/code/quotum/python/final_project/WildRush/users/middleware.py", line 11, in __call__
+    if request.user.is_authenticated:
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 258, in inner
+    self._setup()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 198, in get_user
+    user = backend.get_user(user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/backends.py", line 158, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 492, in get
+    num = len(clone)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: users_user.is_admin
+"GET / HTTP/1.1" 500 158314
+"GET /admin HTTP/1.1" 301 0
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: users_user.is_admin
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 230, in inner
+    if not self.has_permission(request):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 203, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 258, in inner
+    self._setup()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 198, in get_user
+    user = backend.get_user(user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/backends.py", line 158, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 492, in get
+    num = len(clone)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: users_user.is_admin
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: users_user.is_admin
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/Development/code/quotum/python/final_project/WildRush/users/middleware.py", line 11, in __call__
+    if request.user.is_authenticated:
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 258, in inner
+    self._setup()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 198, in get_user
+    user = backend.get_user(user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/backends.py", line 158, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 492, in get
+    num = len(clone)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: users_user.is_admin
+"GET /admin/ HTTP/1.1" 500 158386
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: users_user.is_admin
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ari/Development/code/quotum/python/final_project/WildRush/WildRush/urls.py", line 22, in home
+    return render(request, 'base.html')
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/defaulttags.py", line 315, in render
+    match = condition.eval(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/defaulttags.py", line 878, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 712, in resolve
+    obj = self.var.resolve(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 258, in inner
+    self._setup()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 198, in get_user
+    user = backend.get_user(user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/backends.py", line 158, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 492, in get
+    num = len(clone)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: users_user.is_admin
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: users_user.is_admin
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/Development/code/quotum/python/final_project/WildRush/users/middleware.py", line 11, in __call__
+    if request.user.is_authenticated:
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 258, in inner
+    self._setup()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 198, in get_user
+    user = backend.get_user(user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/contrib/auth/backends.py", line 158, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 492, in get
+    num = len(clone)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: users_user.is_admin
+"GET / HTTP/1.1" 500 158451
+/home/ari/Development/code/quotum/python/final_project/WildRush/WildRush/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 6555
+"GET /static/admin/css/base.css HTTP/1.1" 200 19513
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3401
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18575
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3331
+"GET / HTTP/1.1" 200 905
+"GET / HTTP/1.1" 200 905
+"GET / HTTP/1.1" 200 905
+"GET /experiences/ HTTP/1.1" 200 1253
+"GET /bookings/ HTTP/1.1" 200 1220
+"GET /reviews/ HTTP/1.1" 200 1182
+Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/profile.html
+"GET /profile/ HTTP/1.1" 500 86177
+"GET /accounts/logout/ HTTP/1.1" 200 1717
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 732
+"GET /accounts/login/ HTTP/1.1" 200 2678
+"POST /accounts/login/ HTTP/1.1" 200 2592
+"POST /accounts/login/ HTTP/1.1" 200 2592
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 732
+"GET / HTTP/1.1" 200 732
+/home/ari/Development/code/quotum/python/final_project/WildRush/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ari/Development/code/quotum/python/final_project/WildRush/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /accounts/login/ HTTP/1.1" 200 2468
+"GET /accounts/signup/ HTTP/1.1" 200 2907
+"POST /accounts/signup/ HTTP/1.1" 200 3013
+Internal Server Error: /accounts/signup/
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/views.py", line 143, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/mixins.py", line 40, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/mixins.py", line 105, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/mixins.py", line 69, in post
+    response = self.form_valid(form)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/views.py", line 149, in form_valid
+    self.user, resp = form.try_save(self.request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/forms.py", line 450, in try_save
+    return super().try_save(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/forms.py", line 386, in try_save
+    user = self.save(request)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/forms.py", line 399, in save
+    setup_user_email(request, user, [EmailAddress(email=email)] if email else [])
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/allauth/account/utils.py", line 304, in setup_user_email
+    a.save()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1632, in execute_sql
+    self.connection.ops.fetch_returned_insert_columns(
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/backends/base/operations.py", line 205, in fetch_returned_insert_columns
+    return cursor.fetchone()
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ari/.pyenv/versions/3.8.13/lib/python3.8/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+django.db.utils.IntegrityError: FOREIGN KEY constraint failed
+"POST /accounts/signup/ HTTP/1.1" 500 201609
